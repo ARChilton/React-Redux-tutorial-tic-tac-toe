@@ -4,7 +4,7 @@ import GameStatus from '../containers/gameStatus' //imports the GameStatus conta
 // dumb rendering only component
 const Board = () => {
     return (
-        <div>
+        <div className="game-board">
             <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}

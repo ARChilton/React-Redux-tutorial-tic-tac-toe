@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import './index.css'
 import App from './components/app'
-import xoGameApp from './reducers/combineReducers'
+import xoGameApp from './reducers'
 
 let store = createStore(xoGameApp);
 console.log(store.getState());

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import StatusHeading from '../containers/statusContainer'
+import StatusHeading from '../containers/Status'
 import MovesTaken from '../containers/moveContainer'
 
 const GameInfo = () => {
