@@ -1,6 +1,7 @@
 import * as actions from '../actions';
 
-
+//Contains the initial state of the application
+//This could have been a subsection of the overall store containing only the state of the relevant parts for the reducer below
 export const initialState = {
     history: [{
         squares: Array(9).fill(null)
@@ -11,6 +12,14 @@ export const initialState = {
     historicStep: null
 };
 
+/**
+ * This controls the functionality of the app and updates the state
+ * must have a default that returns the state as it is, this stops the app from breaking if the action is not in the switch
+ * Contains a switch which will reference an action from the actions.js file, this can be written as a string but is safer taken as a variable which is stored in the action.js file and cross-referenced against the action itself
+ * Unless returning the state as it is prior to the action this function MUST return a new object as to not mutate the previous state, required for time travel actions
+ * @param {object} state defines the current state of the app BEFORE the action is taken
+ * @param {object} action defines the action that has been requested from the app
+ */
 export const xoGame = (state = initialState, action) => {
     console.log(action.type);
     switch (action.type) {
@@ -43,9 +52,7 @@ export const xoGame = (state = initialState, action) => {
             })
 
         case actions.VIEW_HISTORIC_STEP:
-            console.log('Historic step to be seen')
-            console.log(action.stepId)
-            console.log(state.history)
+            console.log('Historic step to be seen: ' + action.stepId)
 
             return Object.assign({}, state, {
                 historicStep: action.stepId
@@ -56,7 +63,10 @@ export const xoGame = (state = initialState, action) => {
     }
 
 }
-//function from react example to calc winner
+/**
+ * function from react example to calc winner
+ * @param {[]} squares 
+ */
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Move from '../components/move'
 import { viewHistoricStep } from '../actions';
 
-//props req. moves onClick desc
+//props req. moves onClick 
 const mstp = (state, ownProps) => {
     console.log(ownProps)
     return ownProps
