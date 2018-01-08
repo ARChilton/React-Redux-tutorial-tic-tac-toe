@@ -1,11 +1,10 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import './index.css';
-// import * as actions from './actions.js';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import './index.css'
 import App from './components/app'
-import xoGameApp from './reducers/combineReducers';
+import xoGameApp from './reducers/combineReducers'
 
 let store = createStore(xoGameApp);
 console.log(store.getState());
