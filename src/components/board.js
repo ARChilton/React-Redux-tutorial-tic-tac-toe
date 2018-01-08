@@ -1,8 +1,7 @@
 import React from 'react'
-// import Square from './square'
-import GameStatus from '../containers/gameStatus'
+import GameStatus from '../containers/gameStatus' //imports the GameStatus container, this could have also been a container
 
-
+// dumb rendering only component
 const Board = () => {
     return (
         <div>
@@ -25,16 +24,15 @@ const Board = () => {
     );
 }
 
+/**
+ * renders the GameStatus container of index i
+ * @param {number} i 
+ */
 function renderSquare(i) {
     return (
         <GameStatus index={i} />
-        // <Square
-        //     index={i}
-        // // value={squares[i]}
-        // // onClick={() => onClick(i)}
-        // />
     );
 }
 
-
+// allows other files to utilise the Board component
 export default Board
