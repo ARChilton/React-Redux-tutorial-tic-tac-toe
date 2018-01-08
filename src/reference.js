@@ -1,3 +1,8 @@
+/**
+ * The initial tic-tac-toe app made in react with inital Redux store created and a few actions dispatched
+ * This was used to create the Redux version of the app
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
