@@ -10,7 +10,7 @@ const initialState = {
     winner: null
 };
 
-function xoGame(state = initialState, action) {
+const xoGame = (state = initialState, action) => {
     console.log(action.type);
     switch (action.type) {
         case actions.CLICKED_SQUARE:
