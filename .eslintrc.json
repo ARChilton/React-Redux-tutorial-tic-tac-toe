@@ -11,11 +11,11 @@
     "comma-dangle": [
       "warn",
       {
-        "arrays": "never",
-        "objects": "always",
-        "imports": "never",
-        "exports": "never",
-        "functions": "ignore"
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
       }
     ],
     "indent": [
@@ -34,6 +34,10 @@
       {
         "allowForLoopAfterthoughts": true
       }
+    ],
+    "space-in-brackets": [
+      "error",
+      "never"
     ],
     "react/jsx-filename-extension": [
       1,
