@@ -1,13 +1,8 @@
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 
 import Move from '../components/move'
-import { viewHistoricStep } from '../actions'
+import {viewHistoricStep} from '../actions'
 
-// props req. moves onClick
-const mstp = (state, ownProps) => {
-  console.log(ownProps)
-  return ownProps
-}
 
 const mdtp = (dispatch, ownProps) => {
   console.log(ownProps)
@@ -16,6 +11,6 @@ const mdtp = (dispatch, ownProps) => {
   }
 }
 
-const SingleMove = connect(mstp, mdtp)(Move)
+const SingleMove = connect(null, mdtp)(Move)
 
 export default SingleMove

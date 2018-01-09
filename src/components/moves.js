@@ -4,7 +4,7 @@ import SingleMove from '../containers/singleMoveContainer'
 
 /* takes the prop moves and maps it to multiple SingleMove components
  which are given the move and onClick props */
-const Moves = ({ moves, onClick, }) => (
+const Moves = ({moves, onClick}) => (
   <ol>
 
     {moves.map((move, id) => (
@@ -15,7 +15,7 @@ const Moves = ({ moves, onClick, }) => (
 )
 // PropTypes checks the props are provided and in the correct type
 Moves.propTypes = {
-  moves: PropTypes.arrayOf(PropTypes.object).isRequired,
+  moves: PropTypes.arrayOf(PropTypes.array).isRequired,
   onClick: PropTypes.func,
 }
 

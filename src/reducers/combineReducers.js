@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import { xoGame } from './xogame' // imports the reducers to be combined from this file
+import {combineReducers} from 'redux'
+import {xoGame} from './xogame' // imports the reducers to be combined from this file
 
 // combines the reducers into a single reducer function
 // this optimises the reducers and makes file management easier

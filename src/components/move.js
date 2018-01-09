@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Move = ({ move, onClick, }) => {
+const Move = ({move, onClick}) => {
   const desc = move ? `Go to move # ${move}` : 'Go to the game start'
   return (
 

@@ -16,7 +16,7 @@ export const initialState = {
  * function from react example to calc winner
  * @param {[]} squares
  */
-function calculateWinner(squares) {
+export function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -25,7 +25,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ]
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i]
@@ -54,7 +54,7 @@ export const xoGame = (state = initialState, action) => {
     const historyLength = state.history.length - 1
     if (typeof state.history[historyLength].squares[action.square] === 'string') {
       console.log('already played')
-      return Object.assign({}, state, { historicStep: null, })
+      return Object.assign({}, state, {historicStep: null})
     }
     if (typeof state.winner === 'string') {
       return state
@@ -70,7 +70,7 @@ export const xoGame = (state = initialState, action) => {
     return Object.assign({}, state, {
       history: [...state.history, {
         squares,
-      }
+      },
       ],
       stepNumber: state.stepNumber + 1,
       xIsNext: !state.xIsNext,

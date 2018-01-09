@@ -1,7 +1,7 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
 import './index.css'
 import App from './components/app'
 import xoGameApp from './reducers/combineReducers'
@@ -10,11 +10,11 @@ import xoGameApp from './reducers/combineReducers'
 // This sets up the state store
 const store = createStore(xoGameApp)
 // shows the first state on the console
-console.log(store.getState())
+// console.log(store.getState())
 // subscribes to all changes of the state and shows them on the console (should be DEV only)
-const unsubscribe = store.subscribe(() => {
-  console.log(store.getState())
-})
+// const unsubscribe = store.subscribe(() => {
+//   console.log(store.getState())
+// })
 
 
 /**

@@ -1,6 +1,5 @@
-import { connect } from 'react-redux' // imports the connect function
-
-import { clickSquare } from '../actions' // this imports the action(s) to be dispatched
+import {connect} from 'react-redux' // imports the connect function
+import {clickSquare} from '../actions' // this imports the action(s) to be dispatched
 import Square from '../components/square' // this is the component that will be wrapped by this container
 
 /**
@@ -8,12 +7,12 @@ import Square from '../components/square' // this is the component that will be 
  * @param {object} state
  * @param {object} ownProps
  */
-const mstp = (state, ownProps) => {
-  const history = state.xoGame.history
+export const mstp = (state, ownProps) => {
+  const {history} = state.xoGame
   const hLength = history.length
   let value = null
 
-  if (typeof state.xoGame.historicStep === 'number') {
+  if (state.xoGame.historicStep) {
     value = history[state.xoGame.historicStep].squares[ownProps.index]
   } else {
     value = history[hLength - 1].squares[ownProps.index]
