@@ -35,9 +35,17 @@
         "allowForLoopAfterthoughts": true
       }
     ],
-    "space-in-brackets": [
+    "object-curly-spacing": [
       "error",
       "never"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "template-tag-spacing": [
+      "error",
+      "always"
     ],
     "react/jsx-filename-extension": [
       1,
